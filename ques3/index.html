@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inheritance Demonstration</title>
+  </head>
+  <body>
+    <h1>IP Lab-4 Q3</h1>
+    <h2>Check for Error</h2>
+    <p>Error-box</p>
+    <input
+      id="checkError"
+      type="text"
+      placeholder="Enter text for error check"
+      value=""
+    />
+    <button type="submit" onclick="return errorCheck()">Submit</button>
+  </body>
+  <script>
+    class Person {
+      constructor(fname, lname, gender, age) {
+        this.fname = fname;
+        this.lname = lname;
+        this.gender = gender;
+        this.age = age;
+      }
+    }
+
+    class Child extends Person {
+      constructor(fname, lname, gender, age, location) {
+        super(fname, lname, gender, age);
+        this.location = location;
+      }
+    }
+
+    const Candidate1 = new Child("Diya", "Shah", "M", 25, "Coorg");
+    console.log("Candidate 1: ", Candidate1);
+
+    const Candidate2 = new Child("Suleman", "Mathekar", "F", 29);
+    console.log("Candidate 2: ", Candidate2);
+
+    const errorCheck = () => {
+      const value = document.getElementById("checkError").value;
+      console.log(value);
+      if (!value || value === "0") {
+        throw new Error("Invalid Input ");
+      } else {
+        console.log("Valid");
+      }
+    };
+  </script>
+</html>

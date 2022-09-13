@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Person Details</title>
+  </head>
+  <body>
+    <h1>IP Lab-4 Q2</h1>
+    <h2>Person Details</h2>
+  </body>
+  <script>
+    const Person1 = {
+      fname: "Atharva",
+      lname: "Bhoite",
+      gender: "M",
+      age: 20,
+    };
+    console.log("Person 1: ", Person1);
+
+    class Person {
+      constructor(fname, lname, gender, age) {
+        this.fname = fname;
+        this.lname = lname;
+        this.gender = gender;
+        this.age = age;
+      }
+    }
+
+    const Person2 = new Person("Upendra", "Falak", "M", 23);
+    console.log("Person 2: ", Person2);
+
+    function Human(fname, lname, gender, age) {
+      this.fname = fname;
+      this.lname = lname;
+      this.gender = gender;
+      this.age = age;
+    }
+
+    const Person3 = new Human("Gaurang", "Desai", "M", 45);
+    console.log(Person3);
+  </script>
+</html>
