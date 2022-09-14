@@ -8,12 +8,11 @@
   </head>
   <body>
     <h1>IP Lab-4 Q3</h1>
-    <h2>Check for Error</h2>
-    <p>Error-box</p>
+    <p>Enter roll number of student</p>
     <input
       id="checkError"
       type="text"
-      placeholder="Enter text for error check"
+      placeholder="Roll number"
       value=""
     />
     <button type="submit" onclick="return errorCheck()">Submit</button>
@@ -44,10 +43,10 @@
     const errorCheck = () => {
       const value = document.getElementById("checkError").value;
       console.log(value);
-      if (!value || value === "0") {
-        throw new Error("Invalid Input ");
+      if (value > 0) {
+        console.log("Valid Roll number");
       } else {
-        console.log("Valid");
+        throw new Error("Invalid roll number");
       }
     };
   </script>
